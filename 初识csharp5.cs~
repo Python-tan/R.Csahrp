@@ -1,0 +1,30 @@
+using System;
+namespace Csharp
+{
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            InterChild inter = new InterChild();
+            inter.printObject();
+            Console.WriteLine("{0}",inter.Age(10));
+        }
+    }
+    //定义接口默认为public
+    interface Inter
+    {
+        void printObject();
+        int Age(int age);
+    }
+    class InterChild:Inter
+    {
+        public void printObject()
+        {
+            Console.WriteLine("I am a SB");
+        }
+        public int Age(int age)
+        {
+            return age+100;
+        }
+    }
+}
